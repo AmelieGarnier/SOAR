@@ -3,11 +3,6 @@
 
 # SOAR — TheHive 4 · Cortex · Shuffle — Runbook
 
-**Auteur :** Amélie Garnier — Étudiante en cybersécurité — Promotion 2025-2026 — Mai 2026  
-**Formation :** M1 Expert Réseaux et Infrastructures Sécurisées — ORT Toulouse / 3iL Ingénieurs  
-**Version :** v9.1 — Mai 2026  
-**Stack :** Wazuh 4.13.x · Suricata 7.0.10 · TheHive 4 · Cortex 3 · Shuffle
-
 ---
 
 ## Contexte du projet
@@ -35,22 +30,6 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 ## Architecture
 
 ![Architecture SOAR Vue Globale](./screenshots/architecture-globale.png)
-
-```
-┌─────────────────────────────┐     ┌─────────────────────────────────────┐
-│   VM Wazuh — 192.168.1.50   │     │      VM SOAR — 192.168.1.60          │
-│                             │     │                                      │
-│  Suricata 7.0.10            │     │  ┌──────────┐   ┌───────────────┐   │
-│    └─► eve.json             │     │  │ TheHive 4│   │   Cortex 3    │   │
-│                             │     │  │  :9000   │   │    :9001      │   │
-│  Wazuh Manager 4.13         │─────►  └──────────┘   └───────────────┘   │
-│    └─► webhook HTTP :3001   │     │                                      │
-│                             │     │  ┌──────────────────────────────┐   │
-│  Active Response (iptables) │◄────│  │        Shuffle               │   │
-│                             │     │  │     :3443 / :3001            │   │
-└─────────────────────────────┘     │  └──────────────────────────────┘   │
-                                    └─────────────────────────────────────┘
-```
 
 ![Stack Docker — Ports, Services & Dépendances](./screenshots/stack-docker.png)
 
@@ -96,17 +75,9 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
     └──► Cortex → AbuseIPDB analyzer (rapport dans TheHive)
 ```
 
-**Workflow Shuffle — wazuh-alert-triage**
-
 ![Shuffle Workflow](./screenshots/shuffle-workflow.png)
 
-**Cases TheHive générés automatiquement**
-
 ![TheHive Cases](./screenshots/thehive-cases-list.png)
-
-**Détail d'un case TheHive (Suricata Scan de ports)**
-
-![TheHive Case Detail](./screenshots/thehive-case-detail.png)
 
 ---
 
@@ -118,15 +89,9 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 | 2 | Scan de ports (nmap) | Suricata sid:9000001 + Wazuh règle 100002 | T1046 / TA0007 | Case TheHive + notification Discord |
 | 3 | Exfiltration DNS | Suricata sid:9000002 + Wazuh règle 100003 | T1048.003 / TA0010 | Case TheHive severity H, TLP:RED |
 
-**Use Case #1 — Flux complet Brute Force SSH**
-
 ![Flux UC1 SSH Brute Force](./screenshots/usecase-1-ssh-brute-force.png)
 
-**Use Case #2 — Flux complet Port Scan Suricata**
-
 ![Flux UC2 Port Scan](./screenshots/usecase-2-port-scan.png)
-
-**Use Case #3 — Flux complet Exfiltration DNS**
 
 ![Flux UC3 DNS Exfiltration](./screenshots/usecase-3-dns-exfil.png)
 
@@ -193,13 +158,7 @@ Informations incluses : IP source, cible, règle Wazuh / signature Suricata, ID 
 
 ---
 
-## Dashboards
-
-**Dashboard OpenSearch — Alertes SOAR en temps réel**
-
-![Dashboard OpenSearch](./screenshots/dashboard-opensearch.png)
-
-**Dashboard Wazuh — MITRE ATT&CK**
+## Dashboard
 
 ![Dashboard Wazuh MITRE](./screenshots/dashboard-wazuh-mitre.png)
 
