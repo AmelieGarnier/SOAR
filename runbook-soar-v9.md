@@ -1088,49 +1088,7 @@ Une infrastructure de sécurité défaillante crée un angle mort critique. Zabb
 | CPU VM SOAR | Agent Zabbix | > 85% pendant 5 min |
 | Disque VM SOAR | Agent Zabbix | > 80% |
 
-### Installation de l'agent Zabbix — VM SOAR
-
-```bash
-wget https://repo.zabbix.com/zabbix/6.4/debian/pool/main/z/zabbix-release/zabbix-release_6.4-1+debian12_all.deb
-dpkg -i zabbix-release_6.4-1+debian12_all.deb
-apt update
-apt install -y zabbix-agent2
-
-micro /etc/zabbix/zabbix_agent2.conf
-# → Server=IP_VM_ZABBIX
-# → ServerActive=IP_VM_ZABBIX
-# → Hostname=SOAR
-
-systemctl enable zabbix-agent2
-systemctl start zabbix-agent2
-```
-
-### Installation de l'agent Zabbix — VM Wazuh
-
-```bash
-wget https://repo.zabbix.com/zabbix/6.4/debian/pool/main/z/zabbix-release/zabbix-release_6.4-1+debian12_all.deb
-dpkg -i zabbix-release_6.4-1+debian12_all.deb
-apt update
-apt install -y zabbix-agent2
-
-micro /etc/zabbix/zabbix_agent2.conf
-# → Server=IP_VM_ZABBIX
-# → ServerActive=IP_VM_ZABBIX
-# → Hostname=Wazuh
-
-systemctl enable zabbix-agent2
-systemctl start zabbix-agent2
-```
-
-### Checks réseau Zabbix (Simple check)
-
-```
-net.tcp.service[tcp,192.168.1.50,1514]   → wazuh-manager
-net.tcp.service[tcp,192.168.1.50,9200]   → wazuh-indexer
-net.tcp.service[tcp,192.168.1.60,9000]   → thehive
-net.tcp.service[tcp,192.168.1.60,9001]   → cortex
-net.tcp.service[tcp,192.168.1.60,3443]   → shuffle
-```
+> 📖 **Installation et configuration de Zabbix** (serveur, agents, checks réseau, templates) → **[github.com/AmelieGarnier/Zabbix](https://github.com/AmelieGarnier/Zabbix)**
 
 ---
 
