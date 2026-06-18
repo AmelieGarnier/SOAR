@@ -635,6 +635,8 @@ Vérifier la liaison : **TheHive → Admin → Platform Management** → status 
 
 ### Nom du workflow : `wazuh-alert-triage`
 
+![Workflow wazuh-alert-triage](./screenshots/workflow-wazuh-alert-triage.png)
+
 ### Architecture complète (nœuds renommés v6)
 
 ```
@@ -1093,6 +1095,8 @@ Une infrastructure de sécurité défaillante crée un angle mort critique. Zabb
 ---
 
 ### 13.6 Intégration Zabbix → Shuffle — workflow zabbix-alert-triage
+
+![Workflow zabbix-alert-triage](./screenshots/workflow-zabbix-alert-triage.png)
 
 En complément de la supervision passive (sections 13.1 à 13.5), Zabbix peut devenir une **source d'alertes active** pour la stack SOAR : un trigger Zabbix déclenche un webhook vers Shuffle, qui crée un case TheHive et notifie Discord, sur le même principe que les webhooks Wazuh.
 
@@ -1826,6 +1830,8 @@ tail -5 /var/ossec/logs/integrations.log
 
 ### 17.4 Workflow Shuffle — suricata-portscan-triage
 
+![Workflow suricata-portscan-triage](./screenshots/workflow-suricata-portscan-triage.png)
+
 Créer un **nouveau workflow distinct** dans Shuffle (ne pas réutiliser `wazuh-alert-triage`).
 
 #### Nœud Wazuh-Webhook
@@ -2469,6 +2475,8 @@ systemctl restart wazuh-manager
 ```
 
 ### 18.1.4 Workflow Shuffle — dns-exfil-triage
+
+![Workflow dns-exfil-triage](./screenshots/workflow-dns-exfil-triage.png)
 
 **Créer le workflow :**
 

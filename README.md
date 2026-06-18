@@ -69,10 +69,6 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
     └──► Cortex → AbuseIPDB analyzer (rapport dans TheHive)
 ```
 
-![Shuffle Workflow](./screenshots/shuffle-workflow.png)
-
-![TheHive Cases](./screenshots/thehive-cases-list.png)
-
 ---
 
 ## Use cases implémentés
