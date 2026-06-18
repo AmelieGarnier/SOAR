@@ -91,7 +91,7 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 
 | Fichier | Description |
 |---------|-------------|
-| [`runbook-soar-v9.md`](./runbook-soar-v9.md) | Runbook complet — installation, configurations, alertes, troubleshooting |
+| [`runbook-soar.md`](./runbook-soar.md) | Runbook complet — installation, configurations, alertes, troubleshooting |
 
 ---
 
@@ -107,7 +107,7 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 
 ## Démarrage rapide
 
-Consulter le runbook complet : [runbook-soar.md](./runbook-soar-v9.md)
+Consulter le runbook complet : [runbook-soar.md](./runbook-soar.md)
 
 Steps principales :
 
