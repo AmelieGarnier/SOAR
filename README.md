@@ -117,7 +117,7 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 
 ## Démarrage rapide
 
-Consulter le runbook complet : [runbook-soar-v9.md](./runbook-soar-v9.md)
+Consulter le runbook complet : [runbook-soar.md](./runbook-soar-v9.md)
 
 Steps principales :
 
@@ -191,10 +191,9 @@ Ce projet démontre qu'une plateforme SOAR complète peut être construite avec 
 
 ## Perspectives d'amélioration
 
-- **Gestion des secrets (L3-2) :** clés API dans un fichier `.env` chiffré via GPG (AES-256) et injectées via Docker secrets — les credentials disparaissent des nœuds Shuffle et des logs.
-- **Playbook de fermeture de case (L3-3) :** script cron horaire qui re-vérifie l'IP source via AbuseIPDB après 24h et ferme automatiquement le case si le score est inférieur à 10, démontrant un cycle de vie complet sans intervention manuelle.
+- **Gestion des secrets :** clés API dans un fichier `.env` chiffré via GPG (AES-256) et injectées via Docker secrets — les credentials disparaissent des nœuds Shuffle et des logs.
+- **Playbook de fermeture de case :** script cron horaire qui re-vérifie l'IP source via AbuseIPDB après 24h et ferme automatiquement le case si le score est inférieur à 10, démontrant un cycle de vie complet sans intervention manuelle.
 - **Intégration Zabbix → GLPI dans Shuffle :** tickets GLPI automatiques sur alerte supervision, avec case TheHive parallèle si une IP est impliquée — traçabilité unifiée IT/Sécurité.
-- **Enrichissement VirusTotal :** analyzer Cortex pour les indicateurs de hachage (T1204) et authentification renforcée avec compte API Wazuh dédié.
 - **IA agent locale :** nœud Shuffle Ollama + Mistral analysant le payload Wazuh et générant automatiquement un résumé d'investigation dans la description du case TheHive, sans API cloud propriétaire.
 
 ---
