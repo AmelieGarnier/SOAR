@@ -2374,7 +2374,7 @@ Résultat : 24 entrées (8 IPs × 3 vagues), timeline avec 3 pics d'activité.
 
 ---
 
-## 18. Améliorations Niveau 3 — Version avancée
+## 18. L3-1 — Use case #3 : Exfiltration DNS ✅
 
 | # | Amélioration | Objectif | Difficulté | Temps | Impact soutenance |
 |---|---|---|---|---|---|
@@ -2384,8 +2384,6 @@ Résultat : 24 entrées (8 IPs × 3 vagues), timeline avec 3 pics d'activité.
 | L3-4 | Simulation d'attaque scriptée | Script Bash rejouant des scénarios d'attaque | ⭐⭐ | 1 jour | 🔥🔥🔥 |
 
 ---
-
-## 18.1 L3-1 — Use case #3 : Exfiltration DNS ✅
 
 ### Concept
 
