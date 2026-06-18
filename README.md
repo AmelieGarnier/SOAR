@@ -33,12 +33,6 @@ L'essentiel du travail a porté sur la résolution de problèmes non documentés
 
 ![Stack Docker — Ports, Services & Dépendances](./screenshots/stack-docker.png)
 
-| VM | IP | OS | Rôle |
-|----|----|----|----- |
-| VM Wazuh | 192.168.1.50 | Debian 13 | Wazuh 4.13 + Suricata 7.0.10 |
-| VM SOAR | 192.168.1.60 | Debian 13 | TheHive 4 + Cortex 3 + Shuffle |
-| VM Zabbix | 192.168.1.61 | Debian 13 | Zabbix Server 7.0 + supervision |
-
 ---
 
 ## Services supervisés
